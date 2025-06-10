@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #one{
+            animation-name: myAnimation;
+            animation-duration: 3s;
+            animation-iteration-count: 4;
+            animation: myAnimation 3s infinite;
+        }
+        #two{
+            animation:slidein 5s infinite;
+        }
+        #three{
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+            animation-name:spin;
+            animation-duration: 2s;
+            animation-iteration-count:infinite;
+        }
+        #btn{
+            background-color: maroon;
+            padding: 10px 20px;
+            border:  none;
+            transition:background-color 0.4s ease,transform 0.4s ease;
+        }
+        btn:hover{
+            background-color: maroon;
+            transform:scale(1.1);
+
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg);
+            background-color:orange; }
+            100% { transform: rotate(360deg);
+            background-color:yellow; }
+        }
+        @keyframes slidein{
+            0%{transform:translateX(0);
+                color:blue;}
+            100%{transform:translateX(600px);
+            color:red;}
+
+        }
+        @keyframes myAnimation {
+            0%{color: deeppink}
+            50%{color: purple}
+            100%{color:green}
+
+        }
+
+    </style>
+</head>
+<body>
+<h1 id="two">welcome to my site</h1>
+<p id="one">lorem ipsum dolor sit </p>
+<div id="three">
+    <p>lorem ipsum dolor sit </p>
+</div>
+<button id="btn">click me</button>
+
+</body>
+</html>
